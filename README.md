@@ -27,3 +27,4 @@
 - 1주차 : "혼자 공부하는 C언어" 교재로 C에서 부족했던 부분을 공부 및 복습하였음.<br> <img src="https://lh5.googleusercontent.com/IiWWJU3sTd4_0VLzoBktoQa0J9BDWW4d7Ljn6Jmc8Bh8Y1Pioh-ZS3BnBaUpEMKXUnAOWjU9WwrcV8t3ZOMmcKqA-qmxrpMRhvQMPs8ZhXCbrVit_vyCPTi2yYef4_qInD4bNUFD" width=150 height=200></img>
 - 2주차 : gotoxy함수를 [이 링크](https://hyomyo.tistory.com/27)에서, 시간설정함수는 [이 링크](https://hyomyo.tistory.com/20?category=820372)를 참고하여 공부함.
 - 3주차 : 깃허브 사용법을 익히고, 파일을 업로드함. 세부 기능 추후 업데이트 예정.
+- 4주차 : 2주차에 공부한 함수를 이용하여 별이 떨어지는 화면 구현.
