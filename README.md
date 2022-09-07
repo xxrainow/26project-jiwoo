@@ -29,7 +29,7 @@
 #### - 핵심 기능
 <br>
 
-![슬라이드4](https://user-images.githubusercontent.com/90715224/188796481-704a1ee3-f471-4b92-94be-42cbdc6e9aec.PNG)
+![슬aasd라이드4](https://user-images.githubusercontent.com/90715224/188796481-704a1ee3-f471-4b92-94be-42cbdc6e9aec.PNG)
 ![툴스 신입 기수 프로젝트](https://user-images.githubusercontent.com/90715224/188808767-fae031f6-849d-42a8-ac30-ac0576097b7f.png)
 ![슬라이드6](https://user-images.githubusercontent.com/90715224/188796542-9de25030-781e-4f7a-9a33-b6b580ee2c9d.PNG)
 ![슬라이드7](https://user-images.githubusercontent.com/90715224/188796546-2334d835-8839-4915-af11-0230b09421be.PNG)
