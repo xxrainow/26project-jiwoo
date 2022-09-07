@@ -18,8 +18,8 @@
 
 ## 2. 개발 과정
 - 사용한 언어 : C, C++
-<br> <img src="https://velog.velcdn.com/images/taeil314/post/3ee67153-26e6-49f5-b809-2342e44d3601/image.png" width=150 height=150></img>
-<br> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/1200px-ISO_C%2B%2B_Logo.svg.png" width=50 height=50></img>
+<br> <img src="https://velog.velcdn.com/images/taeil314/post/3ee67153-26e6-49f5-b809-2342e44d3601/image.png" width=50 height=50></img>
+ <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/1200px-ISO_C%2B%2B_Logo.svg.png" width=50 height=50></img>
 - 핵심 기능
 
 ## 3. 프로젝트 실행 결과
