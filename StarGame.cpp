@@ -1,0 +1,176 @@
+#include <iostream>
+#include <cstdlib>
+#include <Windows.h>
+#include <conio.h>
+
+// #include "Console.h"
+using namespace std;
+
+#define MAX 30
+
+
+void SetConsoleSize(int _col, int _lines);
+void SetColor(unsigned char _BgColor, unsigned char _TextColor);
+void GotoXY(int _x, int _y);
+void Clear(void);
+void StartMenu(void);
+bool ScoreMenu(void);
+
+struct st_state {
+    int x = 0;
+    int y = 0;
+    bool bAct = false;
+};
+
+st_state stStar[MAX];
+st_state stPlayer;
+
+int score = 0;
+
+
+int main() {
+
+
+    //init
+    SetConsoleSize(30, 30);
+    srand(time(NULL));
+
+    stPlayer.x = 14;
+    stPlayer.y = 28;
+    stPlayer.bAct = true;
+
+    while (1)
+    {
+        StartMenu();
+        while (1) {
+            Clear();
+            if (stPlayer.bAct) { //플레이어가 f면 별 생성 안함
+                // x축에 별 랜덤 생성
+                for (int i = 0; i < MAX; i++) {
+                    if (!stStar[i].bAct) {
+                        stStar[i].x = (rand() % 15) * 2;
+                        stStar[i].y = 0;
+                        stStar[i].bAct = true; //얘를 t로 바꿔주면 다음에 별 내려오는 게 작동이 됨
+                        break; 
+                    }
+                }
+                //input처리
+                if (GetAsyncKeyState(VK_LEFT) & 0x8000) { 
+                    stPlayer.x -= 2;
+                    if (stPlayer.x < 0) stPlayer.x = 0;
+                }
+                if (GetAsyncKeyState(VK_RIGHT) & 0x8000) {
+                    stPlayer.x += 2;
+                    if (stPlayer.x > 28) stPlayer.x = 28;
+                }
+            }
+
+
+            // 별이 내려오는 과정 + 조건
+            int cnt = 0;
+            for (int j = 0; j < MAX; j++) {
+                if (stStar[j].bAct)                 {
+                    if (stStar[j].y == stPlayer.y) { //충돌
+                        if (stStar[j].x == stPlayer.x) { //(stPlayer.x-2 <= stStar[j].x && stStar[j].x <= stPlayer.x+2)
+                            stPlayer.bAct = false;
+                            break;
+                            //왜 또 구조체 사용해서 Player 뒀을까??? 까먹었음 -> 이것 때문이었음 ??? 아니?? 기억이 안남
+                        }
+                    }
+
+                    cnt += 1;
+                    GotoXY(stStar[j].x, stStar[j].y);
+                    printf("★");
+                    stStar[j].y++; //근데 이러면 break가 없어서 for문 다 돌때까지 초기화도 안되서 찍히는 것도 계속 잔상이 남는 거 아닌가??? 
+
+
+                    if (stStar[j].y > stPlayer.y) {
+                        stStar[j].bAct = false;
+                        //if 조건이 별이 세모를 넘어갔다는 뜻이니까 이제 별이 움직이는 걸 멈추라는 뜻임 
+                        //그래서 false로 해주면 위에 if 조건을 만족시키지 않아서 ㄱㅊ음
+                    }
+                }
+            }
+
+            //Player 조건
+            if (stPlayer.bAct) {
+                GotoXY(stPlayer.x, stPlayer.y);
+                printf("▲");
+            }
+            else {
+                GotoXY(stPlayer.x, stPlayer.y);
+                printf("▒");
+            }
+
+
+            if (stPlayer.bAct) {
+                score += 1;
+                GotoXY(28, 0);
+                printf("%d", score);
+            }
+
+            Sleep(100);
+            if (cnt == 0) {
+                break;
+            }
+
+        }
+        Sleep(100);
+        if (ScoreMenu()) exit(0);
+        Sleep(100);
+    }
+
+    system("pause");
+    return 0;
+}
+
+
+
+
+
+void SetConsoleSize(int _col, int _lines) {
+    char setText[100];
+    sprintf_s(setText, "mode con cols=%d lines=%d", _col, _lines);
+    system(setText);
+}
+
+void GotoXY(int _x, int _y) {
+    COORD pos = { (short)_x, (short)_y };
+
+    SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), pos);
+}
+
+void Clear(void) {
+    system("cls");
+}
+
+void StartMenu(void) {
+    while (1) {
+        Clear();
+        GotoXY(14, 10);
+        printf("별 피하기 게임");
+        GotoXY(12, 20);
+        printf("시작하려면 아무키를 눌러주세요.");
+        if (_kbhit()) break;
+        Sleep(50);
+    }
+
+}
+
+
+bool ScoreMenu(void) {
+    bool end =false;
+    while (1) {
+        Clear();
+        GotoXY(10, 10);
+        printf("GAME OVER \n \n \n Score : %d", score);
+        GotoXY(15, 20);
+        printf("아무 키를 누르면 종료됩니다\n");
+        if (_kbhit()) {
+            end = true;
+            break;
+        }
+        Sleep(50);
+    }
+    return end;
+}
