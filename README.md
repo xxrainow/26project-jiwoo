@@ -27,6 +27,8 @@
 
 <br>
 #### - 핵심 기능
+<br>
+
 ![슬라이드4](https://user-images.githubusercontent.com/90715224/188796481-704a1ee3-f471-4b92-94be-42cbdc6e9aec.PNG)
 ![슬라이드5](https://user-images.githubusercontent.com/90715224/188796533-44300ee6-1fdc-4b69-b2ec-daa8e89793ae.PNG)
 ![슬라이드6](https://user-images.githubusercontent.com/90715224/188796542-9de25030-781e-4f7a-9a33-b6b580ee2c9d.PNG)
@@ -34,6 +36,8 @@
 ![슬라이드8](https://user-images.githubusercontent.com/90715224/188796553-5380661d-0da1-4910-b418-2d44b0b40b49.PNG)
 ![슬라이드9](https://user-images.githubusercontent.com/90715224/188796558-174b8f7e-0b59-4137-aec2-58998738b472.PNG)
 ![슬라이드10](https://user-images.githubusercontent.com/90715224/188796566-6022963e-0d7f-46ca-bdb7-c14eeb0b7c38.PNG)
+
+<br>
 
 ## 3. 프로젝트 실행 결과
 ![image](https://user-images.githubusercontent.com/90715224/188796650-2a93b496-6179-41aa-a6ed-830ae7b29110.png)
