@@ -34,14 +34,14 @@
 ![게임 제작에 필요한 함수](https://user-images.githubusercontent.com/90715224/188796542-9de25030-781e-4f7a-9a33-b6b580ee2c9d.PNG)
 ![메인함수1](https://user-images.githubusercontent.com/90715224/188796546-2334d835-8839-4915-af11-0230b09421be.PNG)
 ![메인함수2](https://user-images.githubusercontent.com/90715224/188796553-5380661d-0da1-4910-b418-2d44b0b40b49.PNG)
-GetAsyncKeyState함수 사용은 [이 링크](https://coding-factory.tistory.com/693)를 참조하였음.
+* GetAsyncKeyState함수 사용은 [이 링크](https://coding-factory.tistory.com/693)를 참조하였음.
 ![메인함수3](https://user-images.githubusercontent.com/90715224/188796558-174b8f7e-0b59-4137-aec2-58998738b472.PNG)
 ![메인함수4](https://user-images.githubusercontent.com/90715224/188796566-6022963e-0d7f-46ca-bdb7-c14eeb0b7c38.PNG)
 
 <br>
 
 ## 3. 프로젝트 실행 결과
-![image](https://user-images.githubusercontent.com/90715224/188796650-2a93b496-6179-41aa-a6ed-830ae7b29110.png)
+![프로젝트실행화면](https://user-images.githubusercontent.com/90715224/188796650-2a93b496-6179-41aa-a6ed-830ae7b29110.png)
 
 <br>
 
