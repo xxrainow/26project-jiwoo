@@ -18,7 +18,7 @@
 
 ## 2. 개발 과정
 - 사용한 언어 : C, C++
-<br> ![image](https://user-images.githubusercontent.com/90715224/188795705-068ad1cf-b536-4a47-9c59-9d84953afb85.png)width=150 height=200
+<br> <![image](https://user-images.githubusercontent.com/90715224/188795705-068ad1cf-b536-4a47-9c59-9d84953afb85.png)width=150 height=200>
 
  
 - 핵심 기능
