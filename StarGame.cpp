@@ -2,15 +2,12 @@
 #include <cstdlib>
 #include <Windows.h>
 #include <conio.h>
-
-// #include "Console.h"
 using namespace std;
 
 #define MAX 30
 
 
 void SetConsoleSize(int _col, int _lines);
-void SetColor(unsigned char _BgColor, unsigned char _TextColor);
 void GotoXY(int _x, int _y);
 void Clear(void);
 void StartMenu(void);
@@ -30,8 +27,6 @@ int score = 0;
 
 int main() {
 
-
-    //init
     SetConsoleSize(30, 30);
     srand(time(NULL));
 
