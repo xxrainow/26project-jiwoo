@@ -8,6 +8,7 @@ using namespace std;
 
 
 void SetConsoleSize(int _col, int _lines);
+void SetColor(unsigned char _BgColor, unsigned char _TextColor);
 void GotoXY(int _x, int _y);
 void Clear(void);
 void StartMenu(void);
@@ -39,13 +40,13 @@ int main() {
         StartMenu();
         while (1) {
             Clear();
-            if (stPlayer.bAct) { //stPlayer.bAct가 false면 별 생성 안함
+            if (stPlayer.bAct) {
                 // x축에 별 랜덤 생성
                 for (int i = 0; i < MAX; i++) {
                     if (!stStar[i].bAct) {
                         stStar[i].x = (rand() % 15) * 2;
                         stStar[i].y = 0;
-                        stStar[i].bAct = true; //별이 내려오게 함.
+                        stStar[i].bAct = true;
                         break; 
                     }
                 }
@@ -75,7 +76,8 @@ int main() {
                     cnt += 1;
                     GotoXY(stStar[j].x, stStar[j].y);
                     printf("★");
-                    stStar[j].y++;
+                    stStar[j].y++; 
+
 
                     if (stStar[j].y > stPlayer.y) {
                         stStar[j].bAct = false;
@@ -106,9 +108,9 @@ int main() {
             }
 
         }
-        Sleep(50);
+        Sleep(100);
         if (ScoreMenu()) exit(0);
-        Sleep(50);
+        Sleep(100);
     }
 
     system("pause");
@@ -138,9 +140,9 @@ void Clear(void) {
 void StartMenu(void) {
     while (1) {
         Clear();
-        GotoXY(14, 10);
+        GotoXY(9, 10);
         printf("별 피하기 게임");
-        GotoXY(12, 20);
+        GotoXY(5, 20);
         printf("시작하려면 아무키를 눌러주세요.");
         if (_kbhit()) break;
         Sleep(50);
@@ -154,8 +156,10 @@ bool ScoreMenu(void) {
     while (1) {
         Clear();
         GotoXY(10, 10);
-        printf("GAME OVER \n \n \n Score : %d", score);
-        GotoXY(15, 20);
+        printf("GAME OVER");
+        GotoXY(10, 13);
+        printf("Score : %d", score);
+        GotoXY(5, 20);
         printf("아무 키를 누르면 종료됩니다\n");
         if (_kbhit()) {
             end = true;
