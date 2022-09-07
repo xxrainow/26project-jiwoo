@@ -44,17 +44,17 @@ int main() {
         StartMenu();
         while (1) {
             Clear();
-            if (stPlayer.bAct) { //ÇÃ·¹ÀÌ¾î°¡ f¸é º° »ı¼º ¾ÈÇÔ
-                // xÃà¿¡ º° ·£´ı »ı¼º
+            if (stPlayer.bAct) { //í”Œë ˆì´ì–´ê°€ fë©´ ë³„ ìƒì„± ì•ˆí•¨
+                // xì¶•ì— ë³„ ëœë¤ ìƒì„±
                 for (int i = 0; i < MAX; i++) {
                     if (!stStar[i].bAct) {
                         stStar[i].x = (rand() % 15) * 2;
                         stStar[i].y = 0;
-                        stStar[i].bAct = true; //¾ê¸¦ t·Î ¹Ù²ãÁÖ¸é ´ÙÀ½¿¡ º° ³»·Á¿À´Â °Ô ÀÛµ¿ÀÌ µÊ
+                        stStar[i].bAct = true; //ì–˜ë¥¼ të¡œ ë°”ê¿”ì£¼ë©´ ë‹¤ìŒì— ë³„ ë‚´ë ¤ì˜¤ëŠ” ê²Œ ì‘ë™ì´ ë¨
                         break; 
                     }
                 }
-                //inputÃ³¸®
+                //inputì²˜ë¦¬
                 if (GetAsyncKeyState(VK_LEFT) & 0x8000) { 
                     stPlayer.x -= 2;
                     if (stPlayer.x < 0) stPlayer.x = 0;
@@ -66,40 +66,37 @@ int main() {
             }
 
 
-            // º°ÀÌ ³»·Á¿À´Â °úÁ¤ + Á¶°Ç
+            // ë³„ì´ ë‚´ë ¤ì˜¤ëŠ” ê³¼ì • + ì¡°ê±´
             int cnt = 0;
             for (int j = 0; j < MAX; j++) {
                 if (stStar[j].bAct)                 {
-                    if (stStar[j].y == stPlayer.y) { //Ãæµ¹
-                        if (stStar[j].x == stPlayer.x) { //(stPlayer.x-2 <= stStar[j].x && stStar[j].x <= stPlayer.x+2)
+                    if (stStar[j].y == stPlayer.y) { //ì¶©ëŒ
+                        if (stStar[j].x == stPlayer.x) { 
                             stPlayer.bAct = false;
                             break;
-                            //¿Ö ¶Ç ±¸Á¶Ã¼ »ç¿ëÇØ¼­ Player µ×À»±î??? ±î¸Ô¾úÀ½ -> ÀÌ°Í ¶§¹®ÀÌ¾úÀ½ ??? ¾Æ´Ï?? ±â¾ïÀÌ ¾È³²
                         }
                     }
 
                     cnt += 1;
                     GotoXY(stStar[j].x, stStar[j].y);
-                    printf("¡Ú");
-                    stStar[j].y++; //±Ùµ¥ ÀÌ·¯¸é break°¡ ¾ø¾î¼­ for¹® ´Ù µ¹¶§±îÁö ÃÊ±âÈ­µµ ¾ÈµÇ¼­ ÂïÈ÷´Â °Íµµ °è¼Ó ÀÜ»óÀÌ ³²´Â °Å ¾Æ´Ñ°¡??? 
+                    printf("â˜…");
+                    stStar[j].y++; //ê·¼ë° ì´ëŸ¬ë©´ breakê°€ ì—†ì–´ì„œ forë¬¸ ë‹¤ ëŒë•Œê¹Œì§€ ì´ˆê¸°í™”ë„ ì•ˆë˜ì„œ ì°íˆëŠ” ê²ƒë„ ê³„ì† ì”ìƒì´ ë‚¨ëŠ” ê±° ì•„ë‹Œê°€??? 
 
 
                     if (stStar[j].y > stPlayer.y) {
                         stStar[j].bAct = false;
-                        //if Á¶°ÇÀÌ º°ÀÌ ¼¼¸ğ¸¦ ³Ñ¾î°¬´Ù´Â ¶æÀÌ´Ï±î ÀÌÁ¦ º°ÀÌ ¿òÁ÷ÀÌ´Â °É ¸ØÃß¶ó´Â ¶æÀÓ 
-                        //±×·¡¼­ false·Î ÇØÁÖ¸é À§¿¡ if Á¶°ÇÀ» ¸¸Á·½ÃÅ°Áö ¾Ê¾Æ¼­ ¤¡¤ºÀ½
                     }
                 }
             }
 
-            //Player Á¶°Ç
+            //Player ì¡°ê±´
             if (stPlayer.bAct) {
                 GotoXY(stPlayer.x, stPlayer.y);
-                printf("¡ã");
+                printf("â–²");
             }
             else {
                 GotoXY(stPlayer.x, stPlayer.y);
-                printf("¢Æ");
+                printf("â–’");
             }
 
 
@@ -115,9 +112,9 @@ int main() {
             }
 
         }
-        Sleep(100);
+        Sleep(50);
         if (ScoreMenu()) exit(0);
-        Sleep(100);
+        Sleep(50);
     }
 
     system("pause");
@@ -148,9 +145,9 @@ void StartMenu(void) {
     while (1) {
         Clear();
         GotoXY(14, 10);
-        printf("º° ÇÇÇÏ±â °ÔÀÓ");
+        printf("ë³„ í”¼í•˜ê¸° ê²Œì„");
         GotoXY(12, 20);
-        printf("½ÃÀÛÇÏ·Á¸é ¾Æ¹«Å°¸¦ ´­·¯ÁÖ¼¼¿ä.");
+        printf("ì‹œì‘í•˜ë ¤ë©´ ì•„ë¬´í‚¤ë¥¼ ëˆŒëŸ¬ì£¼ì„¸ìš”.");
         if (_kbhit()) break;
         Sleep(50);
     }
@@ -165,7 +162,7 @@ bool ScoreMenu(void) {
         GotoXY(10, 10);
         printf("GAME OVER \n \n \n Score : %d", score);
         GotoXY(15, 20);
-        printf("¾Æ¹« Å°¸¦ ´©¸£¸é Á¾·áµË´Ï´Ù\n");
+        printf("ì•„ë¬´ í‚¤ë¥¼ ëˆ„ë¥´ë©´ ì¢…ë£Œë©ë‹ˆë‹¤\n");
         if (_kbhit()) {
             end = true;
             break;
