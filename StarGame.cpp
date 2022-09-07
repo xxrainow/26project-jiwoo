@@ -39,13 +39,13 @@ int main() {
         StartMenu();
         while (1) {
             Clear();
-            if (stPlayer.bAct) { //플레이어가 f면 별 생성 안함
+            if (stPlayer.bAct) { //stPlayer.bAct가 false면 별 생성 안함
                 // x축에 별 랜덤 생성
                 for (int i = 0; i < MAX; i++) {
                     if (!stStar[i].bAct) {
                         stStar[i].x = (rand() % 15) * 2;
                         stStar[i].y = 0;
-                        stStar[i].bAct = true; //얘를 t로 바꿔주면 다음에 별 내려오는 게 작동이 됨
+                        stStar[i].bAct = true; //별이 내려오게 함.
                         break; 
                     }
                 }
@@ -75,8 +75,7 @@ int main() {
                     cnt += 1;
                     GotoXY(stStar[j].x, stStar[j].y);
                     printf("★");
-                    stStar[j].y++; //근데 이러면 break가 없어서 for문 다 돌때까지 초기화도 안되서 찍히는 것도 계속 잔상이 남는 거 아닌가??? 
-
+                    stStar[j].y++;
 
                     if (stStar[j].y > stPlayer.y) {
                         stStar[j].bAct = false;
