@@ -12,7 +12,7 @@
 3. 프로젝트 실행결과
 4. 앞으로의 계획 혹은 발전 사항
 
-## 1.프로젝트 소개
+## 1. 프로젝트 소개
 - 프로젝트 개요 : 공중에 날아다니는 별을 피해서 살아남는 게임을 제작해본다.
 - 주요 기능 : 게임을 시작하면 별이 위에서 내려오는데 이를 피해서 살아남을 때마다 점수가 올라간다 별과 플레이어가 충돌할 경우 게임이 종료되고 최종점수가 마지막 화면에 나온다.
 
@@ -20,8 +20,17 @@
 - 사용한 언어 : C, C++
 <br> ![image](https://user-images.githubusercontent.com/90715224/188795705-068ad1cf-b536-4a47-9c59-9d84953afb85.png)
 - 핵심 기능
+![슬라이드4](https://user-images.githubusercontent.com/90715224/188796481-704a1ee3-f471-4b92-94be-42cbdc6e9aec.PNG)
+![슬라이드5](https://user-images.githubusercontent.com/90715224/188796533-44300ee6-1fdc-4b69-b2ec-daa8e89793ae.PNG)
+![슬라이드6](https://user-images.githubusercontent.com/90715224/188796542-9de25030-781e-4f7a-9a33-b6b580ee2c9d.PNG)
+![슬라이드7](https://user-images.githubusercontent.com/90715224/188796546-2334d835-8839-4915-af11-0230b09421be.PNG)
+![슬라이드8](https://user-images.githubusercontent.com/90715224/188796553-5380661d-0da1-4910-b418-2d44b0b40b49.PNG)
+![슬라이드9](https://user-images.githubusercontent.com/90715224/188796558-174b8f7e-0b59-4137-aec2-58998738b472.PNG)
+![슬라이드10](https://user-images.githubusercontent.com/90715224/188796566-6022963e-0d7f-46ca-bdb7-c14eeb0b7c38.PNG)
 
 ## 3. 프로젝트 실행 결과
+![image](https://user-images.githubusercontent.com/90715224/188796650-2a93b496-6179-41aa-a6ed-830ae7b29110.png)
+
 ## 4. 앞으로의 계획 및 발전 사항
 
 
